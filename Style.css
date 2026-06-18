@@ -70,10 +70,13 @@ body {
 /* ── SPLASH ─────────────────────────────── */
 .splash-container {
   position: fixed; inset: 0;
-  background: linear-gradient(160deg, var(--g900) 0%, var(--g700) 60%, var(--g500) 100%);
+  background: #ffffff;
   z-index: 9999;
-  display: flex; align-items: center; justify-content: center;
-  text-align: center; color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #111827;
   transition: opacity 0.6s ease;
 }
 .splash-content { padding: 24px; }
@@ -83,14 +86,19 @@ body {
   margin-bottom: 20px;
   text-shadow: 0 4px 20px rgba(0,0,0,0.3);
 }
-.splash-title { font-size: 30px; font-weight: 800; letter-spacing: -0.5px; }
-.splash-subtitle { font-size: 14px; opacity: 0.8; margin-top: 8px; }
-.splash-dots { display: flex; justify-content: center; gap: 8px; margin-top: 32px; }
-.splash-dots span {
-  width: 8px; height: 8px; border-radius: 50%;
-  background: rgba(255,255,255,0.4);
-  animation: dotPulse 1.4s infinite ease-in-out;
+.splash-title {
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: #111827;
 }
+.splash-subtitle {
+  font-size: 14px;
+  color: #6b7280;
+  margin-top: 8px;
+}
+.splash-dots { display: flex; justify-content: center; gap: 8px; margin-top: 32px; }
+
 .splash-dots span:nth-child(2) { animation-delay: 0.2s; }
 .splash-dots span:nth-child(3) { animation-delay: 0.4s; }
 @keyframes dotPulse {
@@ -116,7 +124,7 @@ body {
 .bottom-nav {
   position: fixed; bottom: 0; left: 0; width: 100%;
   background: var(--card);
-  border-top: 1px solid var(--border);
+  border-top: 1px solid var(--border);l
   display: flex; justify-content: space-around; align-items: center;
   height: 62px; z-index: 910;
   box-shadow: 0 -4px 16px var(--shadow);
@@ -677,4 +685,39 @@ input:checked + .slider:before { transform: translateX(20px); }
   .quick-menu-grid { grid-template-columns: repeat(3,1fr); gap: 8px; }
   .quick-card { padding: 16px 8px 12px; }
   .quick-title { font-size: 11px; }
+}
+.splash-logo{
+  width:210px;
+  height:210px;
+  object-fit:contain;
+  margin-bottom:20px;
+}
+.splash-logo{
+  width:350px;
+  height:350px;
+  padding:15px;
+  border-radius:30px;
+  background:rgba(255,255,255,.12);
+}
+
+.drawer-logo-img{
+  width:70px;
+  height:70px;
+  object-fit:contain;
+}
+
+.header-logo{
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  object-fit:cover;
+  background:#fff;
+  padding:2px;
+}
+
+body,
+#app,
+#splashScreen,
+.splash-screen{
+    background: #ffffff !important;
 }
